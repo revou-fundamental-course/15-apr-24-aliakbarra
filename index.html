@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Temperatur Converter</title>
-    
-</head>
+    </head>
 
 <body>
     <main>
         <header class="main-title">
             <h1>Temperatur Converter by Ali Akbar</h1>
         </header>
+
         
         <!-- Section Introduction -->
         <section class="main-section">
@@ -20,31 +21,61 @@
                 <p>Masukan Suhu Derajat Celcius (&deg;C) ....</p>
             </section>
     
-            <section class="section-celcius">
-                <header>
-                    <h3>Celcius (&deg;C)</h3>
-                </header>
+            <form id="c-to-f">
+                <section class="section-celcius">
+                    <header>
+                        <h3>Celcius (&deg;C)</h3>
+                    </header>
+        
+                    <article>
+                        <textarea rows="1" id="c-to-f-input" required></textarea>
     
-                <article>
-                    <textarea rows="1"></textarea>
-
-                    <div class="container-button">
-                        <button id="button-convert">Convert</button>
-                        <button id="button-reset">Reset</button>
-                        <button id="button-reverse">Reverse</button>
-                    </div>
-                </article>
-            </section>
-
-            <section class="section-fahrenheit">
-                <header>
-                    <h3>Fahrenheit (&deg;F)</h3>
-                </header>
+                        <div class="container-button">
+                            <button id="button-convert" type="button">Convert</button>
+                            <button id="button-reset">Reset</button>
+                            <button id="button-reverse" onclick="reverse();">Reverse</button>
+                        </div>
+                    </article>
+                </section>
     
-                <article>
-                    <textarea rows="1"></textarea>
-                </article>
-            </section>
+                <section class="section-fahrenheit">
+                    <header>
+                        <h3>Fahrenheit (&deg;F)</h3>
+                    </header>
+        
+                    <article>
+                        <textarea rows="1"></textarea>
+                    </article>
+                </section>
+            </form>
+
+            <form id="f-to-c">    
+                <section class="section-fahrenheit">
+                    <header>
+                        <h3>Fahrenheit (&deg;F)</h3>
+                    </header>
+        
+                    <article>
+                        <textarea rows="1"></textarea>
+                    </article>
+                </section>
+
+                <section class="section-celcius">
+                    <header>
+                        <h3>Celcius (&deg;C)</h3>
+                    </header>
+        
+                    <article>
+                        <textarea rows="1"></textarea>
+    
+                        <div class="container-button">
+                            <button id="button-convert">Convert</button>
+                            <button id="button-reset">Reset</button>
+                            <button id="button-reverse" onclick="reverse();">Reverse</button>
+                        </div>
+                    </article>
+                </section>
+            </form>
 
             <section class="section-result">
                 <header>
@@ -62,11 +93,16 @@
                 </header>
                 <hr>
                 <article>
+                    <h1>Suhu S dalam derajar Fahrenheit (&deg;F) sama dengan suhu S dalam derajat 
+                        <br>
+                        Celsius (&deg;C) kali 9/5 tambah 32.
+                    </h1>
                     <h1 class="formula-s">S<sub>(&deg;F)</sub><h1>
                 </article>
             </section>
         </section>
     </main> 
+    <script src="js/script.js"></script>
 
 </body>
 
