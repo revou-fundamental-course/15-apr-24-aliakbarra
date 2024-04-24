@@ -1,31 +1,36 @@
-// Ini File js
-
-let isReverse = true;
-
-function reverse() {
-    let cToF = document.getElementById('c-to-f');
-    let fToC = document.getElementById('f-to-c');
-
-    if (isReverse) {
-        console.log(isReverse);
-        fToC.style.display = "block";
-        cToF.style.display = "none";
-        isReverse = false;
-    } else {
-        // Ini Tampilan Default
-        console.log(isReverse);
-        cToF.style.display = "block";
-        fToC.style.display = "none";
-        isReverse = true;
-    }
-}
+// Ini File JS
 
 function convert() {
-    let celcius = document.getElementById("c-to-f-input").value;
-    if (celcius.match(/[^0-9]/g)) {
-        alert("Tolong Input Nomor Saja!");
+    let celciusinput = parseFloat(document.getElementById('celciusinput').value);
+    let fahrenheitoutput = document.getElementById('fahrenheitoutput');
+    let calculasi = document.getElementById('calculasi');
+
+    if (!isNaN(celciusinput)) {
+        let fahrenheit = (celciusinput * 9 / 5) + 32;
+        fahrenheitoutput.value = fahrenheit.toFixed(2) + ' °F';
+        calculasi.value = celciusinput + ' °C * 9/5 + 32 = ' + fahrenheit.toFixed(2) + ' °F';
+    } else {
+        fahrenheitoutput.value = 'Harap masukkan nilai!';
+        calculasi.value = '';
     }
-    console.log(celcius);
 }
 
-document.getElementById("button-convert").addEventListener('click', () => convert());
+function reset() {
+    document.getElementById('celciusinput').value = '';
+    document.getElementById('fahrenheitoutput').value = '';
+    document.getElementById('calculasi').value = '';
+}
+
+function reverse() {
+    let fahrenheitoutput = document.getElementById('fahrenheitoutput');
+    let celciusinput = parseFloat(fahrenheitoutput.value);
+
+    if (!isNaN(celciusinput)) {
+        var celsius = (celciusinput - 32) * 5 / 9;
+        document.getElementById('celciusinput').value = celsius.toFixed(2);
+        document.getElementById('calculasi').value = celciusinput + ' °F - 32 * 5/9 = ' + celsius.toFixed(2) + ' °C';
+    } else {
+        document.getElementById('celciusinput').value = 'Harap masukkan nilai!';
+        document.getElementById('calculasi').value = '';
+    }
+}
