@@ -1,4 +1,4 @@
-/* ini file css */
+/* Ini File css */
 
 main {
     padding-left: 32px;
@@ -7,7 +7,7 @@ main {
     padding-bottom: 64px;
 }
 
-.main-title{
+.main-title {
     text-align: center;
 }
 
@@ -17,36 +17,35 @@ main {
     border-radius: 4px;
 }
 
-.section-celcius{
+.section-celcius {
     padding-top: 16px;
 }
 
-.section-fahrenheit{
+.section-fahrenheit {
     padding-top: 16px;
 }
 
-.section-result{
+.section-result {
     padding-top: 16px;
 }
 
-.section-explanation{
+.section-explanation {
     padding-top: 16px;
 }
 
-textarea{
+textarea {
     width: 100%;
     height: 32px;
     resize: none;
     border: 2px solid lavender;
     border-radius: 4px;
-    font-size: 10px;
+    font-size: 16px;
     color: coral;
 }
 
-.formula-s{
+.formula-s {
     font-size: 20px;
     font-style: italic;
-    
 }
 
 .formula-s>sub {
@@ -58,8 +57,9 @@ textarea{
 }
 
 button {
+    border: none;
     font-size: 14px;
-    padding:  8px;
+    padding: 8px;
     border-radius: 4px;
     font-family: arial;
 }
@@ -79,4 +79,14 @@ button {
 #button-reverse {
     background-color: palevioletred;
     color: white;
+}
+
+#f-to-c {
+    display: none;
+}
+
+@media only screen and (max-width: 480px) {
+    .container-button {
+        display: none;
+    }
 }
